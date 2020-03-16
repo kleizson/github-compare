@@ -15,6 +15,7 @@ export const ContainerForm = styled.div`
     flex-direction: column;
     position: sticky;
     top: 0;
+    box-shadow: 7px 2px 5px 0px rgba(0,0,0,0.75);
     img{
         margin-top: 20%;
     }
@@ -29,13 +30,11 @@ export const Form = styled.form`
         width: 300px;
         height: 30px;
         padding: 10px;
-        border: 0;
         font-size: 15px;
         background-color: #fff;
         color: #444;
         border-radius: 3px;
         font-weight: 600;
-        outline: 0;
     }
 
     button{
@@ -49,7 +48,8 @@ export const Form = styled.form`
         border-radius: 3px;
         outline: 0;
         &:hover{
-            background: rgb(255, 255, 255, 0.3)
+            background: #fff;
+            color: black;
         }
         &:active{
             transform: scale(0.95);

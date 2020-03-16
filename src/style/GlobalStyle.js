@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
     }
     body{
         font-family: sans-serif;
-        background-color: purple; 
+        background-color: #323639; 
     }
 `
 
