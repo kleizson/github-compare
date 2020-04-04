@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
     
@@ -11,6 +11,6 @@ const GlobalStyle = createGlobalStyle`
         font-family: sans-serif;
         background-color: #323639; 
     }
-`
+`;
 
-export default GlobalStyle
+export default GlobalStyle;
