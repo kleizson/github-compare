@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import moment from "moment";
 import api from "../../services/api";
 
-import RepositoryList from "../../components/RepositoryList/index";
+import Card from "../../components/Card/index";
 
 import logo from "../../assets/logo.png";
 
@@ -37,7 +37,7 @@ export default function FormSearch() {
           <button type="submit">+</button>
         </Form>
       </ContainerForm>
-      <RepositoryList repositories={repos} />
+      <Card repositories={repos} />
     </Container>
   );
 }

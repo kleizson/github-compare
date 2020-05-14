@@ -2,7 +2,7 @@ import React from "react";
 
 import { Container, Repository } from "./style";
 
-export default function RepositoryList({ repositories }) {
+export default function Card({ repositories }) {
   return (
     <Container>
       {repositories.map(repository => (

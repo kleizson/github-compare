@@ -33,6 +33,10 @@ export const Form = styled.form`
     color: #444;
     border-radius: 3px;
     font-weight: 600;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   button {
@@ -48,6 +52,7 @@ export const Form = styled.form`
     &:hover {
       background: #fff;
       color: black;
+      cursor: pointer;
     }
     &:active {
       transform: scale(0.95);

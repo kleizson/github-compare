@@ -5,6 +5,7 @@ export const Container = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   color: white;
+  cursor: pointer;
 `;
 
 export const Repository = styled.div`
@@ -28,6 +29,7 @@ export const Repository = styled.div`
     align-items: center;
     img {
       width: 64px;
+      border-radius: 50%;
     }
     strong {
       font-size: 24px;
