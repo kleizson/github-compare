@@ -23,21 +23,35 @@ export default function FormSearch() {
     setRepo([...repos, repository]);
   }
 
+  async function removeRepository(id) {
+    const repositoryId = id;
+
+    const newRepositoryList = repos.filter((repo) => parseInt(repo.id) !== parseInt(repositoryId));
+
+    return setRepo(newRepositoryList);
+  }
+
   return (
-    <Container>
-      <ContainerForm>
-        <img src={logo} width="80%" alt="logo" />
-        <Form onSubmit={addRepository}>
-          <input
-            type="text"
-            placeholder="user/repository"
-            value={inputRepo}
-            onChange={e => setInputRepo(e.target.value)}
-          />
-          <button type="submit">+</button>
-        </Form>
-      </ContainerForm>
-      <Card repositories={repos} />
-    </Container>
+    <>
+      <Container>
+        <ContainerForm>
+          <img src={logo} width="80%" alt="logo" onClick={() => { console.log(repos) }} />
+          <Form onSubmit={addRepository}>
+            <input
+              type="text"
+              placeholder="user/repository"
+              value={inputRepo}
+              onChange={e => setInputRepo(e.target.value)}
+            />
+            <button type="submit">+</button>
+          </Form>
+        </ContainerForm>
+        {
+          repos && repos.length > 0 ? (
+            <Card repositories={repos} removeRepository={removeRepository} />
+          ) : null
+        }
+      </Container>
+    </>
   );
 }
