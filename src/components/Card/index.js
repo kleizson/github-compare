@@ -2,12 +2,13 @@ import React from "react";
 
 import { Container, Repository } from "./style";
 
-export default function RepositoryList({ repositories }) {
+export default function Card({ repositories, removeRepository }) {
   return (
     <Container>
       {repositories.map(repository => (
         <Repository key={repository.id}>
           <header>
+            <p style={{ marginLeft: '225px', color: 'red', fontWeight: 'bold' }} onClick={(e) => { removeRepository(e.target.id) }} id={repository.id}>X</p>
             <img
               src={repository.owner.avatar_url}
               alt={repository.owner.login}

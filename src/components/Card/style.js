@@ -4,7 +4,8 @@ export const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  color: white;
+  color: #304C89;
+  cursor: pointer;
 `;
 
 export const Repository = styled.div`
@@ -14,8 +15,8 @@ export const Repository = styled.div`
   flex-direction: column;
   border-radius: 5px;
   margin: 20px 10px 20px 30px;
-  box-shadow: -3px 2px 15px 2px rgba(0, 0, 0, 0.75);
-  background-color: #474a51;
+  box-shadow: -3px 2px 15px 2px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
   transition: 0.4s ease-out;
   &:hover {
     transform: translateY(-10px);
@@ -28,6 +29,7 @@ export const Repository = styled.div`
     align-items: center;
     img {
       width: 64px;
+      border-radius: 50%;
     }
     strong {
       font-size: 24px;
@@ -44,15 +46,15 @@ export const Repository = styled.div`
     li {
       font-weight: bold;
       padding: 12px 20px;
-      color: #fff;
+      color: #555;
       &:nth-child(2n - 1) {
-        background-color: gray;
+        background-color: #10101010;
       }
     }
     small {
       font-weight: normal;
       font-size: 12px;
-      color: #fff;
+      color: #555;
       font-style: italic;
     }
   }
